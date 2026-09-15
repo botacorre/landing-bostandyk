@@ -61,10 +61,12 @@ h1, h2, h3 {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-top: 15px;
+    max-width: 400px; 
+    width: 100%;       
+    height: auto;      
+    border-radius: 12px; 
+    display: block;
+    margin: 15px 0;    
 }
 
 article {
