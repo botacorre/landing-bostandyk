@@ -131,3 +131,40 @@ footer {
         gap: 8px;
     }
 }
+
+.courses-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.course-card {
+    flex: 1;
+    background-color: #ffffff;
+    border: 2px solid #ebd5dc;
+    border-radius: 16px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.course-card:hover {
+    background-color: #b85b7e;
+    border-color: #b85b7e;
+    color: #ffffff;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(184, 91, 126, 0.25);
+}
+
+.course-card:hover h3 {
+    color: #ffffff;
+}
+
+
+@media (max-width: 600px) {
+    .courses-container {
+        flex-direction: column;
+    }
+}
