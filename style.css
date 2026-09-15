@@ -7,7 +7,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
-    color: #2d3748;
+    color: #ed6da9;
     background-color: #f7e4ed;
     padding: 0 20px;
 }
@@ -18,7 +18,7 @@ header, main, footer {
 }
 
 header {
-    background-color: #ffffff;
+    background-color: #dbadc3;
     padding: 20px;
     border-bottom: 2px solid #f7e4ed;
 }
@@ -32,7 +32,7 @@ nav {
 .logo {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #2b6cb0;
+    color: #f7f2f5;
 }
 
 nav ul {
@@ -43,7 +43,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #4a5568;
+    color: #f7f2f5;
     font-weight: 500;
 }
 
@@ -56,7 +56,7 @@ section {
 }
 
 h1, h2, h3 {
-    color: #1a202c;
+    color: #853d5e;
     margin-bottom: 12px;
 }
 
@@ -97,7 +97,7 @@ textarea {
 }
 
 button {
-    background-color: #3182ce;
+    background-color: #853d5e;
     color: white;
     padding: 12px 24px;
     border: none;
@@ -107,7 +107,7 @@ button {
 }
 
 button:hover {
-    background-color: #2b6cb0;
+    background-color: #f598c3;
 }
 
 footer {
