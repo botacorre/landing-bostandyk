@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Курсы английского языка Bostandyk School: разговорные группы, преподаватели и бесплатный пробный урок.">
+    <meta name="description" content="Курсы английского языка Bostandyk School: General English, IELTS, квалифицированные преподаватели и бесплатный пробный урок.">
     <title>Bostandyk English School — Курсы английского языка</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Фиксированная шапка сайта -->
     <header>
         <nav>
             <span class="logo">Bostandyk School</span>
             <ul>
-                <li><a href="#about">О нас</a></li>
+                <li><a href="#about">Главная</a></li>
                 <li><a href="#services">Курсы</a></li>
                 <li><a href="#teachers">Преподаватели</a></li>
                 <li><a href="#contact">Пробный урок</a></li>
@@ -22,67 +23,130 @@
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h1>Школа английского языка Bostandyk School</h1>
-            <p>Помогаем заговорить на английском уверенно и без языкового барьера. Обучение по современным методикам с акцентом на практику.</p>
-            <img src="images/school.jpg" alt="Студенты на занятии английским языком">
-        </section>
-
-        <section id="services">
-            <h2>Наши программы обучения</h2>
-            <div class="courses-container">
-                <article class="course-card">
-                    <h3>General English</h3>
-                    <p>Развитие речи, восприятия на слух и грамматики для любых уровней — от Starter до Advanced.</p>
-                    <img src="images/generalenglish.jpg" alt="Занятия по разговорному английскому">
-                </article>
-                <article class="course-card">
-                    <h3>Подготовка к IELTS</h3>
-                    <p>Интенсивный курс для успешной сдачи международного экзамена на требуемый балл.</p>
-                    <img src="images/ielts.jpg" alt="Занятия по IELTS">
-                </article>
+    <main class="snap-container">
+        <!-- СЕКЦИЯ 1: Главная (Заглавная страница на весь экран ноутбука) -->
+        <section id="about" class="page-section hero">
+            <div class="hero-content">
+                <h1>Bostandyk English School</h1>
+                <p class="subtitle">Открой мир свободного общения на английском языке с профессионалами</p>
+                <div class="hero-body">
+                    <img src="images/school.jpg" alt="Студенты Bostandyk School" class="hero-img">
+                    <div class="hero-text">
+                        <p>Мы создаем вдохновляющую среду для эффективного изучения английского языка. Наши программы адаптированы под современные стандарты обучения и сфокусированы на преодолении языкового барьера.</p>
+                        <a href="#contact" class="btn-primary">Записаться на пробный урок</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="teachers">
-            <h2>Наши преподаватели</h2>
-            <article>
-                <h3>Квалифицированные эксперты</h3>
-                <p>Все наши преподаватели имеют международные сертификаты CELTA/TESOL и практический опыт преподавания от 5 лет.</p>
-                <img src="images/teacher.jpg" alt="Преподаватель школы английского языка">
-            </article>
+        <!-- СЕКЦИЯ 2: Программы обучения (General English и IELTS) -->
+        <section id="services" class="page-section">
+            <div class="section-content">
+                <h2>Наши программы обучения</h2>
+                <p class="section-desc">Выберите направление, подходящее под ваши цели</p>
+                
+                <div class="courses-container">
+                    <article class="course-card">
+                        <img src="images/generalenglish.jpg" alt="Занятия по разговорному английскому">
+                        <h3>General English</h3>
+                        <p>Комплексная программа для развития речи, восприятия на слух, чтения и грамматики. Курс рассчитан на все уровни — от Starter до Advanced.</p>
+                    </article>
+                    
+                    <article class="course-card">
+                        <img src="images/ielts.jpg" alt="Занятия по подготовке к IELTS">
+                        <h3>Подготовка к IELTS</h3>
+                        <p>Интенсивный курс подготовки к международному экзамену. Разбор стратегий для всех 4 секций: Listening, Reading, Writing и Speaking.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Запись на бесплатный пробный урок</h2>
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Ваше имя:</label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                </div>
+        <!-- СЕКЦИЯ 3: Преподаватели (5 учителей) -->
+        <section id="teachers" class="page-section">
+            <div class="section-content">
+                <h2>Наши преподаватели</h2>
+                <p class="section-desc">Команда опытных экспертов с международными сертификатами</p>
                 
-                <div class="form-group">
-                    <label for="email">Электронная почта:</label>
-                    <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                <div class="teachers-grid">
+                    <!-- Учитель 1 -->
+                    <article class="teacher-card">
+                        <img src="images/teacher1.jpg" alt="Преподаватель Анель">
+                        <h3>Анель Сергазинова</h3>
+                        <span class="badge">IELTS 8.5 / CELTA</span>
+                        <p class="exp">Опыт: 6 лет</p>
+                        <p class="desc">Экс-преподаватель языкового центра InterPress. Специализируется на интенсивной подготовке к IELTS Writing & Speaking.</p>
+                    </article>
+
+                    <!-- Учитель 2 -->
+                    <article class="teacher-card">
+                        <img src="images/teacher2.jpg" alt="Преподаватель Данияр">
+                        <h3>Данияр Ахметов</h3>
+                        <span class="badge">TESOL / MA Applied Linguistics</span>
+                        <p class="exp">Опыт: 8 лет</p>
+                        <p class="desc">Выпускник University of Manchester. Спикинг-тренер, помогающий преодолеть языковой барьер за короткий срок.</p>
+                    </article>
+
+                    <!-- Учитель 3 -->
+                    <article class="teacher-card">
+                        <img src="images/teacher3.jpg" alt="Преподаватель Камила">
+                        <h3>Камила Оспанова</h3>
+                        <span class="badge">IELTS 8.0 / TKT</span>
+                        <p class="exp">Опыт: 5 лет</p>
+                        <p class="desc">Работала в международной лингвистической школе. Автор интерактивных методик изучения грамматики General English.</p>
+                    </article>
+
+                    <!-- Учитель 4 -->
+                    <article class="teacher-card">
+                        <img src="images/teacher4.jpg" alt="Преподаватель Санжар">
+                        <h3>Санжар Рахимов</h3>
+                        <span class="badge">IELTS 8.5 / DELTA</span>
+                        <p class="exp">Опыт: 7 лет</p>
+                        <p class="desc">Старший методист школы. Проводил корпоративное обучение английскому языку в крупнейших IT-компаниях.</p>
+                    </article>
+
+                    <!-- Учитель 5 -->
+                    <article class="teacher-card">
+                        <img src="images/teacher5.jpg" alt="Преподаватель Аида">
+                        <h3>Аида Смагулова</h3>
+                        <span class="badge">CELTA / Cambridge Examiner</span>
+                        <p class="exp">Опыт: 9 лет</p>
+                        <p class="desc">Сертифицированный экзаменатор Cambridge. Эксперт по глубокому погружению в бизнес-английский и IELTS Academic.</p>
+                    </article>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Сообщение:</label>
-                    <textarea id="message" name="message" required placeholder="Укажите ваш текущий уровень языка"></textarea>
-                </div>
-                
-                <button type="submit">Записаться на урок</button>
-            </form>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ 4: Запись на бесплатный урок -->
+        <section id="contact" class="page-section">
+            <div class="section-content form-section">
+                <h2>Запись на бесплатный пробный урок</h2>
+                <p class="section-desc">Оставьте заявку, и мы подберем для вас идеальную группу</p>
+
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Электронная почта:</label>
+                        <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Уровень языка или пожелания:</label>
+                        <textarea id="message" name="message" required placeholder="Например: хочу подготовиться к IELTS или определить свой уровень"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Записаться на урок</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Bostandyk English School. Все права защищены.</p>
     </footer>
-
-</body>
-</html>
 
 </body>
 </html>
