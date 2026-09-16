@@ -1,15 +1,3 @@
-/* Переменные и базовый сброс */
-:root {
-    --primary: #853d5e; /* Основной цвет */
-    --primary-hover: #6d304c;
-    --bg-light: #fcfbfb;
-    --bg-accent: #f7e4ed;
-    --text-dark: #1a1a1a;
-    --text-body: #555555;
-    --text-muted: #888888;
-    --border-color: #eaeaea;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
