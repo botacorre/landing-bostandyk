@@ -233,62 +233,86 @@ header {
     border-radius: 10px;
 }
 
-/* ================= TEACHERS ================= */
+/* ================= TEACHERS (Крупный формат) ================= */
 .teachers-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    /* На крупных экранах размещаем по 3 карточки в ряд — так они становятся гораздо шире */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Центрируем последние 2 карточки во втором ряду для красивого баланса */
+.teachers-grid .teacher-card:nth-child(4) {
+    grid-column: 1 / 2;
+    margin-left: 50%;
+}
+
+.teachers-grid .teacher-card:nth-child(5) {
+    grid-column: 2 / 3;
+    margin-left: 50%;
 }
 
 .teacher-card {
     background: #ffffff;
     border: 1px solid #eaeaea;
-    border-radius: 12px;
-    padding: 16px;
+    border-radius: 16px;
+    padding: 24px;
     text-align: center;
-    transition: transform 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .teacher-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(133, 61, 94, 0.08);
+    border-color: #853d5e;
 }
 
+/* Крупное прямоугольное фото портретного формата */
 .teacher-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 100%;
+    height: 220px; /* Увеличенная высота фото */
+    border-radius: 12px;
     object-fit: cover;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .teacher-card h3 {
-    font-size: 0.95rem;
-    margin-bottom: 4px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
 }
 
 .teacher-badge {
     display: inline-block;
     background: #f7e4ed;
     color: #853d5e;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 3px 6px;
-    border-radius: 4px;
-    margin-bottom: 6px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .teacher-exp {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: #888;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .teacher-desc {
-    font-size: 0.75rem;
-    color: #666;
-    line-height: 1.3;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
 }
+
+
 
 /* ================= FORM ================= */
 .form-section {
