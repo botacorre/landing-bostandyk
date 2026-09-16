@@ -380,3 +380,29 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* ================= TEAM BANNER ================= */
+.team-banner {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.team-banner-text {
+    font-size: 1.05rem;
+    color: #444;
+    font-weight: 500;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
+    line-height: 1.5;
+}
+
+.team-banner-img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    display: block;
+    margin: 0 auto;
+}
