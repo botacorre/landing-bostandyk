@@ -1,7 +1,7 @@
 # Лендинг школы английского языка — Bostandyk School
 
 - **Тема:** Школа английского языка (курсы, преподаватели, бесплатный пробный урок).
-- **Живой сайт:** https://<botacorre>.github.io/landing-bostandyk/
+- **Живой сайт:** [https://<botacorre>.github.io/landing-bostandyk/](https://botacorre.github.io/landing-bostandyk/)
 
 ## Что сделано:
 1. Выполнена семантическая разметка HTML5: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`.
