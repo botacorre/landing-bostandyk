@@ -1,6 +1,6 @@
-/* Переменные и базовый сброс */
+/* ================= VARIABLES & RESET ================= */
 :root {
-    --primary: #853d5e; /* Основной цвет */
+    --primary: #853d5e;
     --primary-hover: #6d304c;
     --bg-light: #fcfbfb;
     --bg-accent: #f7e4ed;
@@ -27,7 +27,7 @@ body {
     line-height: 1.6;
 }
 
-/* Шапка и навигация */
+/* ================= HEADER & NAV ================= */
 header {
     position: fixed;
     top: 0;
@@ -88,7 +88,7 @@ header {
     color: #ffffff;
 }
 
-/* Первый экран (Hero) */
+/* ================= HERO SECTION ================= */
 .hero-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -152,7 +152,7 @@ header {
     margin-bottom: 40px;
 }
 
-/* Кнопки */
+/* BUTTONS */
 .btn-primary,
 .btn-outline {
     display: inline-block;
@@ -187,7 +187,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* Блок со статистикой */
+/* STATS */
 .hero-stats {
     display: flex;
     align-items: center;
@@ -219,7 +219,7 @@ header {
     background: var(--border-color);
 }
 
-/* Картинка и плавающая карточка */
+/* HERO IMAGE & FLOATING CARD */
 .hero-right {
     flex: 1;
     display: flex;
@@ -281,7 +281,7 @@ header {
     color: #777777;
 }
 
-/* Общий контейнер секций */
+/* ================= CONTENT SECTIONS ================= */
 .content-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -302,7 +302,7 @@ header {
     color: #777777;
 }
 
-/* Карточки курсов */
+/* COURSES */
 .courses-grid {
     display: flex;
     gap: 30px;
@@ -348,7 +348,7 @@ header {
     border-radius: 10px;
 }
 
-/* Карточки преподавателей */
+/* TEACHERS */
 .teachers-grid {
     display: flex;
     flex-wrap: wrap;
@@ -416,7 +416,7 @@ header {
     line-height: 1.4;
 }
 
-/* Блок с фото команды */
+/* TEAM BANNER */
 .team-banner {
     text-align: center;
     margin: 0 auto 50px;
@@ -445,7 +445,7 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Форма обратной связи */
+/* ================= FORM ================= */
 .form-section {
     display: flex;
     justify-content: center;
@@ -510,7 +510,7 @@ header {
     background: var(--primary-hover);
 }
 
-/* Подвал (футер) */
+/* ================= FOOTER ================= */
 footer {
     border-top: 1px solid var(--border-color);
     text-align: center;
@@ -519,7 +519,7 @@ footer {
     color: var(--text-muted);
 }
 
-/* Адаптив под мобилки и планшеты */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 900px) {
     .hero-section {
         flex-direction: column;
