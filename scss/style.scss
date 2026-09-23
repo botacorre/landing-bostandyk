@@ -29,12 +29,12 @@ img {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   width: 100%;
 }
 
 .section-header {
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   text-align: center;
 
   &__tag {
@@ -69,7 +69,7 @@ img {
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: 10px;
-  padding: 12px 24px;
+  padding: 14px 26px;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
@@ -99,12 +99,11 @@ img {
 
   &--nav {
     border: 1.5px solid $color-primary;
-    padding: 8px 16px;
+    padding: 8px 18px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     background-color: #ffffff;
     color: $color-primary;
-    white-space: nowrap;
 
     &:hover {
       background-color: $color-accent;
@@ -116,12 +115,12 @@ img {
   }
 }
 
-// Header Navigation Fix
+// Header Navigation
 .header {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(255, 245, 248, 0.98);
+  background: rgba(255, 245, 248, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid $color-border;
@@ -130,72 +129,98 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
+    padding: 18px 24px;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 12px;
-
-    @include respond-to('mobile') {
-      justify-content: space-between;
-    }
+    position: relative;
   }
 
   &__logo {
     font-weight: 700;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: $color-primary;
     text-decoration: none;
-    white-space: nowrap;
+  }
+
+  &__toggle {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+
+    span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: $color-primary;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    @include respond-to('mobile') {
+      display: flex;
+    }
   }
 
   &__nav {
     @include respond-to('mobile') {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
       width: 100%;
-      order: 3;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-bottom: 1px solid $color-border;
+      padding: 20px;
     }
   }
 
   &__menu {
     display: flex;
     list-style: none;
-    gap: 20px;
-    align-items: center;
+    gap: 30px;
 
     @include respond-to('mobile') {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 16px;
-      text-align: center;
-      background: #ffffff;
-      padding: 12px;
-      border-radius: 12px;
-      border: 1px solid $color-border;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
   }
 
   &__link {
     text-decoration: none;
     color: #555555;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: block;
+    font-size: 0.95rem;
 
     &:hover {
       color: $color-primary;
+    }
+  }
+
+  &__toggle:checked ~ &__nav {
+    @include respond-to('mobile') {
+      display: block;
     }
   }
 }
 
 // Hero Section
 .hero {
-  padding: 50px 0;
+  padding: 60px 0;
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
+    gap: 50px;
 
     @include respond-to('mobile') {
       flex-direction: column;
@@ -233,14 +258,14 @@ img {
   }
 
   &__title {
-    font-size: 3.2rem;
-    line-height: 1.1;
+    font-size: 3.5rem;
+    line-height: 1.05;
     font-weight: 800;
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
     margin-bottom: 20px;
 
     @include respond-to('mobile') {
-      font-size: 2.2rem;
+      font-size: 2.4rem;
     }
   }
 
@@ -249,19 +274,18 @@ img {
   }
 
   &__desc {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: $color-text-muted;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
   }
 
   &__actions {
     display: flex;
-    gap: 14px;
-    margin-bottom: 35px;
+    gap: 16px;
+    margin-bottom: 40px;
 
     @include respond-to('mobile') {
       justify-content: center;
-      flex-direction: column;
     }
   }
 
@@ -269,7 +293,7 @@ img {
     display: flex;
     align-items: center;
     gap: 30px;
-    padding-top: 20px;
+    padding-top: 24px;
     border-top: 1px solid $color-border;
 
     @include respond-to('mobile') {
@@ -278,40 +302,41 @@ img {
   }
 
   &__stat-num {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 800;
     color: $color-primary;
     display: block;
   }
 
   &__stat-text {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: $color-text-muted;
   }
 
   &__image-box {
     flex: 1;
+    position: relative;
     max-width: 450px;
     width: 100%;
   }
 
   &__img {
     width: 100%;
-    height: 420px;
+    height: 480px;
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid $color-border;
-    box-shadow: 0 10px 30px rgba(133, 61, 94, 0.08);
+    box-shadow: 0 15px 35px rgba(133, 61, 94, 0.1);
   }
 }
 
 // Courses Section
 .courses {
-  padding: 60px 0;
+  padding: 80px 0;
 
   &__grid {
     display: grid;
-    gap: 24px;
+    gap: 30px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
@@ -327,43 +352,48 @@ img {
   background: $color-card-bg;
   border: 1px solid $color-border;
   border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 15px rgba(133, 61, 94, 0.04);
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(133, 61, 94, 0.05);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   &__num {
     font-size: 0.85rem;
     font-weight: 700;
     color: $color-primary;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: block;
   }
 
   &__title {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   &__text {
     color: $color-text-muted;
-    font-size: 0.9rem;
-    margin-bottom: 16px;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 
   &__img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
     border-radius: 10px;
   }
 }
 
-// Teachers Section & Team Banner Fix
+// Teachers Section
 .teachers {
-  padding: 60px 0 30px 0;
+  padding: 80px 0;
 
   &__grid {
     display: grid;
-    gap: 20px;
+    gap: 24px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
@@ -377,27 +407,23 @@ img {
   &__banner {
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 20px;
   }
 
   &__banner-text {
-    font-size: 1.1rem;
-    color: $color-text;
+    font-size: 1.05rem;
+    color: #444444;
     margin-bottom: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-    padding: 0 10px;
+    font-weight: 500;
   }
 
   &__banner-img {
     width: 100%;
-    max-width: 850px;
-    max-height: 400px;
+    max-width: 800px;
+    max-height: 380px;
     margin: 0 auto;
     object-fit: cover;
     border-radius: 16px;
     border: 1px solid $color-border;
-    box-shadow: 0 8px 25px rgba(133, 61, 94, 0.08);
   }
 }
 
@@ -405,54 +431,55 @@ img {
   background: $color-card-bg;
   border: 1px solid $color-border;
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(133, 61, 94, 0.05);
 
   &__img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     border-radius: 12px;
     object-fit: cover;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
   &__name {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   &__badge {
     display: inline-block;
     background: $color-accent;
     color: $color-primary;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 4px 10px;
+    padding: 6px 12px;
     border-radius: 6px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   &__exp {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: #888888;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   &__desc {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: $color-text-muted;
   }
 }
 
 // Reviews Section
 .reviews {
-  padding: 50px 0 60px 0;
+  padding: 80px 0;
 
   &__grid {
     display: grid;
-    gap: 20px;
+    gap: 24px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
@@ -468,54 +495,53 @@ img {
   background: $color-card-bg;
   border: 1px solid $color-border;
   border-radius: 16px;
-  padding: 24px;
+  padding: 28px;
 
   &__stars {
     color: #ffb400;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   &__text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #444444;
     font-style: italic;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   &__author {
     border-top: 1px solid $color-border;
-    padding-top: 12px;
+    padding-top: 14px;
   }
 
   &__name {
     display: block;
     font-weight: 700;
-    font-size: 0.9rem;
   }
 
   &__course {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     color: $color-primary;
   }
 }
 
 // Form & Contact Section
 .contact {
-  padding: 60px 0;
+  padding: 80px 0;
 
   &__wrapper {
-    max-width: 480px;
+    max-width: 500px;
     margin: 0 auto;
     background: #ffffff;
     border: 1px solid $color-border;
     border-radius: 20px;
-    padding: 30px;
+    padding: 40px;
   }
 }
 
 .form {
   &__group {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 
   &__label {
@@ -527,10 +553,10 @@ img {
 
   &__input {
     width: 100%;
-    padding: 10px 14px;
+    padding: 12px;
     border: 1px solid #e0cdd7;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     outline: none;
 
     &:focus {
@@ -543,7 +569,7 @@ img {
 .footer {
   border-top: 1px solid $color-border;
   text-align: center;
-  padding: 24px;
+  padding: 30px;
   font-size: 0.85rem;
   color: #888888;
 }
