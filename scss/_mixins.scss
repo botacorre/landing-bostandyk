@@ -1,17 +1,11 @@
-@import 'variables';
-
 @mixin respond-to($media) {
   @if $media == 'mobile' {
-    @media (max-width: #{$breakpoint-mobile - 1px}) {
-      @content;
-    }
-  } @else if $media == 'tablet' {
-    @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet}) {
-      @content;
-    }
-  } @else if $media == 'desktop' {
-    @media (min-width: #{$breakpoint-tablet}) {
-      @content;
-    }
+    @media (max-width: 599.98px) { @content; }
+  }
+  @else if $media == 'tablet' {
+    @media (min-width: 600px) and (max-width: 1023.98px) { @content; }
+  }
+  @else if $media == 'desktop' {
+    @media (min-width: 1024px) { @content; }
   }
 }
