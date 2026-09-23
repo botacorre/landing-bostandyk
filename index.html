@@ -5,224 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Курсы английского языка Bostandyk School: разговорные группы, преподаватели и бесплатный пробный урок.">
     <title>Bostandyk English School — Курсы английского языка</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
+    <style>
+        body {
+            background-color: #fff5f8 !important;
+        }
+        .hero-section, .content-section, main {
+            background-color: transparent !important;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Шапка / Навигация -->
-    <header class="header">
-        <div class="header__container">
-            <a href="#" class="header__logo">Bostandyk School</a>
-            
-            <input type="checkbox" id="burger-toggle" class="header__toggle">
-            <label for="burger-toggle" class="header__burger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <nav class="header__nav">
-                <ul class="header__menu">
-                    <li><a href="#about" class="header__link">О нас</a></li>
-                    <li><a href="#courses" class="header__link">Курсы</a></li>
-                    <li><a href="#teachers" class="header__link">Преподаватели</a></li>
-                    <li><a href="#reviews" class="header__link">Отзывы</a></li>
-                </ul>
-            </nav>
-            <a href="#form" class="btn btn--nav">Пробный урок ↗</a>
-        </div>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">Bostandyk School</div>
+            <ul class="nav-links">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#courses">Курсы</a></li>
+                <li><a href="#teachers">Преподаватели</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+            </ul>
+            <a href="#form" class="btn-nav">Пробный урок ↗</a>
+        </nav>
     </header>
 
     <main>
         <!-- Главная секция (Hero) -->
-        <section id="about" class="hero">
-            <div class="container hero__wrapper">
-                <div class="hero__content">
-                    <div class="hero__badge">
-                        <span class="hero__dot"></span>
-                        Идет набор на новый сезон
+        <section id="about" class="hero-section">
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Идет набор на новый сезон
+                </div>
+                <h1 class="hero-title">
+                    English.<br>
+                    <span class="highlight-text">Confidence.</span><br>
+                    Future.
+                </h1>
+                <p class="hero-desc">
+                    Преодолейте языковой барьер с помощью коммуникативных методик. Обучение для жизни, карьеры и успешной сдачи IELTS.
+                </p>
+                <div class="hero-action-group">
+                    <a href="#form" class="btn-primary">Записаться на урок ↗</a>
+                    <a href="#courses" class="btn-outline">Смотреть курсы ↓</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">98%</span>
+                        <span class="stat-text">сдают IELTS на 7.0+</span>
                     </div>
-                    <h1 class="hero__title">
-                        English.<br>
-                        <span class="hero__highlight">Confidence.</span><br>
-                        Future.
-                    </h1>
-                    <p class="hero__desc">
-                        Преодолейте языковой барьер с помощью коммуникативных методик. Обучение для жизни, карьеры и успешной сдачи IELTS.
-                    </p>
-                    <div class="hero__actions">
-                        <a href="#form" class="btn btn--primary">Записаться на урок ↗</a>
-                        <a href="#courses" class="btn btn--outline">Смотреть курсы ↓</a>
-                    </div>
-                    <div class="hero__stats">
-                        <div>
-                            <span class="hero__stat-num">98%</span>
-                            <span class="hero__stat-text">сдают IELTS на 7.0+</span>
-                        </div>
-                        <div>
-                            <span class="hero__stat-num">1 500+</span>
-                            <span class="hero__stat-text">успешных выпускников</span>
-                        </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">1 500+</span>
+                        <span class="stat-text">успешных выпускников</span>
                     </div>
                 </div>
-                <div class="hero__image-box">
-                    <img src="images/school.jpg" alt="Bostandyk School" class="hero__img">
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-container">
+                    <img src="images/school.jpg" alt="Bostandyk School" class="hero-main-img">
+                    <div class="floating-card">
+                        <div class="floating-icon">✨</div>
+                        <div class="floating-info">
+                            <strong>Индивидуальный подход</strong>
+                            <span>Методика Bostandyk Method</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Секция Курсов -->
-        <section id="courses" class="courses">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__tag">ПРОГРАММЫ</span>
-                    <h2 class="section-header__title">Наши курсы</h2>
-                    <p class="section-header__subtitle">Выберите подходящий формат обучения</p>
+        <section id="courses" class="content-section">
+            <div class="section-header">
+                <span class="card-num">ПРОГРАММЫ</span>
+                <h2>Наши курсы</h2>
+                <p>Выберите подходящий формат обучения</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <span class="card-num">01</span>
+                    <h3>General English</h3>
+                    <p>Развитие разговорной речи, грамматики и восприятия на слух. Для всех уровней от Starter до Advanced.</p>
+                    <img src="images/generalenglish.jpg" alt="General English">
                 </div>
-                <div class="courses__grid">
-                    <div class="course-card">
-                        <span class="course-card__num">01</span>
-                        <h3 class="course-card__title">General English</h3>
-                        <p class="course-card__text">Развитие разговорной речи, грамматики и восприятия на слух. Для всех уровней от Starter до Advanced.</p>
-                        <img src="images/generalenglish.jpg" alt="General English" class="course-card__img">
-                    </div>
-                    <div class="course-card">
-                        <span class="course-card__num">02</span>
-                        <h3 class="course-card__title">Подготовка к IELTS</h3>
-                        <p class="course-card__text">Интенсивный курс от сертифицированных преподавателей. Разбор стратегий Speaking, Writing, Reading и Listening.</p>
-                        <img src="images/ielts.jpg" alt="IELTS Prep" class="course-card__img">
-                    </div>
+                <div class="course-card">
+                    <span class="card-num">02</span>
+                    <h3>Подготовка к IELTS</h3>
+                    <p>Интенсивный курс от сертифицированных преподавателей. Разбор стратегий Speaking, Writing, Reading и Listening.</p>
+                    <img src="images/ielts.jpg" alt="IELTS Prep">
                 </div>
             </div>
         </section>
 
-        <!-- Секция Преподавателей -->
-        <section id="teachers" class="teachers">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__tag">КОМАНДА</span>
-                    <h2 class="section-header__title">Преподаватели</h2>
-                    <p class="section-header__subtitle">Преподаватели с международными сертификатами CELTA и TESOL</p>
+        <!-- Секция Преподавателей (все 5 преподавателей + общая фотография команды) -->
+        <section id="teachers" class="content-section">
+            <div class="section-header">
+                <span class="card-num">КОМАНДА</span>
+                <h2>Преподаватели</h2>
+                <p>Преподаватели с международными сертификатами CELTA и TESOL</p>
+            </div>
+            
+            <div class="teachers-grid">
+                <!-- 1 -->
+                <div class="teacher-card">
+                    <img src="images/teacher1.jpg" alt="Анель Сергазинова">
+                    <h3>Анель Сергазинова</h3>
+                    <span class="teacher-badge">IELTS 8.5 / CELTA</span>
+                    <span class="teacher-exp">Опыт 6 лет</span>
+                    <p class="teacher-desc">Экс-преподаватель InterPress. Специалист по IELTS Writing.</p>
                 </div>
+                <!-- 2 -->
+                <div class="teacher-card">
+                    <img src="images/teacher2.jpg" alt="Данияр Ахметов">
+                    <h3>Данияр Ахметов</h3>
+                    <span class="teacher-badge">TESOL / MA Linguistics</span>
+                    <span class="teacher-exp">Опыт 8 лет</span>
+                    <p class="teacher-desc">Выпускник UoM. Спикинг-тренер по постановке речи.</p>
+                </div>
+                <!-- 3 -->
+                <div class="teacher-card">
+                    <img src="images/teacher3.jpg" alt="Камила Оспанова">
+                    <h3>Камила Оспанова</h3>
+                    <span class="teacher-badge">IELTS 8.0 / TKT</span>
+                    <span class="teacher-exp">Опыт 5 лет</span>
+                    <p class="teacher-desc">Автор интерактивных методик изучения грамматики.</p>
+                </div>
+                <!-- 4 -->
+                <div class="teacher-card">
+                    <img src="images/teacher4.jpg" alt="Алихан Нурланов">
+                    <h3>Алихан Нурланов</h3>
+                    <span class="teacher-badge">IELTS 8.5 / CELTA</span>
+                    <span class="teacher-exp">Опыт 7 лет</span>
+                    <p class="teacher-desc">Эксперт по подготовке к разделу Listening и Speaking.</p>
+                </div>
+                <!-- 5 -->
+                <div class="teacher-card">
+                    <img src="images/teacher5.jpg" alt="Диана Жумабекова">
+                    <h3>Диана Жумабекова</h3>
+                    <span class="teacher-badge">TESOL / Business English</span>
+                    <span class="teacher-exp">Опыт 4 года</span>
+                    <p class="teacher-desc">Специалист по разговорному и деловому английскому.</p>
+                </div>
+            </div>
 
-                <div class="teachers__grid">
-                    <div class="teacher-card">
-                        <img src="images/teacher1.jpg" alt="Анель Сергазинова" class="teacher-card__img">
-                        <h3 class="teacher-card__name">Анель Сергазинова</h3>
-                        <span class="teacher-card__badge">IELTS 8.5 / CELTA</span>
-                        <span class="teacher-card__exp">Опыт 6 лет</span>
-                        <p class="teacher-card__desc">Экс-преподаватель InterPress. Специалист по IELTS Writing.</p>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="images/teacher2.jpg" alt="Данияр Ахметов" class="teacher-card__img">
-                        <h3 class="teacher-card__name">Данияр Ахметов</h3>
-                        <span class="teacher-card__badge">TESOL / MA Linguistics</span>
-                        <span class="teacher-card__exp">Опыт 8 лет</span>
-                        <p class="teacher-card__desc">Выпускник UoM. Спикинг-тренер по постановке речи.</p>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="images/teacher3.jpg" alt="Камила Оспанова" class="teacher-card__img">
-                        <h3 class="teacher-card__name">Камила Оспанова</h3>
-                        <span class="teacher-card__badge">IELTS 8.0 / TKT</span>
-                        <span class="teacher-card__exp">Опыт 5 лет</span>
-                        <p class="teacher-card__desc">Автор интерактивных методик изучения грамматики.</p>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="images/teacher4.jpg" alt="Алихан Нурланов" class="teacher-card__img">
-                        <h3 class="teacher-card__name">Алихан Нурланов</h3>
-                        <span class="teacher-card__badge">IELTS 8.5 / CELTA</span>
-                        <span class="teacher-card__exp">Опыт 7 лет</span>
-                        <p class="teacher-card__desc">Эксперт по подготовке к разделу Listening и Speaking.</p>
-                    </div>
-                    <div class="teacher-card">
-                        <img src="images/teacher5.jpg" alt="Диана Жумабекова" class="teacher-card__img">
-                        <h3 class="teacher-card__name">Диана Жумабекова</h3>
-                        <span class="teacher-card__badge">TESOL / Business English</span>
-                        <span class="teacher-card__exp">Опыт 4 года</span>
-                        <p class="teacher-card__desc">Специалист по разговорному и деловому английскому.</p>
-                    </div>
-                </div>
-
-                <div class="teachers__banner">
-                    <p class="teachers__banner-text">Обучение в заботливой атмосфере под руководством опытных менторов</p>
-                    <img src="images/teacher.jpg" alt="Команда Bostandyk School" class="teachers__banner-img">
-                </div>
+            <!-- Баннер команды теперь находится прямо внизу раздела Преподаватели -->
+            <div class="team-banner">
+                <p class="team-banner-text">Обучение в заботливой атмосфере под руководством опытных менторов</p>
+                <img src="images/teacher.jpg" alt="Команда Bostandyk School" class="team-banner-img">
             </div>
         </section>
 
         <!-- Секция Отзывов -->
-        <section id="reviews" class="reviews">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-header__tag">ОТЗЫВЫ</span>
-                    <h2 class="section-header__title">Отзывы студентов</h2>
-                    <p class="section-header__subtitle">Что говорят наши ученики о подготовке и преподавателях</p>
+        <section id="reviews" class="content-section">
+            <div class="section-header">
+                <span class="card-num">ОТЗЫВЫ</span>
+                <h2>Отзывы студентов</h2>
+                <p>Что говорят наши ученики о подготовке и преподавателях</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">«Подготовилась к IELTS всего за 3 месяца и сдала на 7.5! Занятия проходят очень легко, преподаватели объясняют всё максимально доступно. Спикинг больше не пугает!»</p>
+                    <div class="review-author">
+                        <strong>Амина К.</strong>
+                        <span>Курс: Подготовка к IELTS</span>
+                    </div>
                 </div>
-                <div class="reviews__grid">
-                    <div class="review-card">
-                        <div class="review-card__stars">★★★★★</div>
-                        <p class="review-text">«Подготовилась к IELTS всего за 3 месяца и сдала на 7.5! Занятия проходят очень легко, преподаватели объясняют всё максимально доступно.»</p>
-                        <div class="review-card__author">
-                            <span class="review-card__name">Амина К.</span>
-                            <span class="review-card__course">Курс: Подготовка к IELTS</span>
-                        </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">«Прекрасная школа! До этого был языковой барьер, боялся делать ошибки. Но благодаря методике Bostandyk School я наконец-то заговорил на английском свободнее.»</p>
+                    <div class="review-author">
+                        <strong>Алишер С.</strong>
+                        <span>Курс: General English</span>
                     </div>
-                    <div class="review-card">
-                        <div class="review-card__stars">★★★★★</div>
-                        <p class="review-text">«Прекрасная школа! До этого был языковой барьер, боялся делать ошибки. Но благодаря методике Bostandyk School я заговорил свободнее.»</p>
-                        <div class="review-card__author">
-                            <span class="review-card__name">Алишер С.</span>
-                            <span class="review-card__course">Курс: General English</span>
-                        </div>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-card__stars">★★★★★</div>
-                        <p class="review-text">«Уроки пролетают незаметно! Очень уютная атмосфера и заботливые учителя, которые всегда поддержат и разберут сложную тему.»</p>
-                        <div class="review-card__author">
-                            <span class="review-card__name">Мадина Т.</span>
-                            <span class="review-card__course">Курс: General English</span>
-                        </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">«Уроки пролетают незаметно! Очень уютная атмосфера и заботливые учителя, которые всегда поддержат и разберут каждую сложную тему до мелочей.»</p>
+                    <div class="review-author">
+                        <strong>Мадина Т.</strong>
+                        <span>Курс: General English</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Форма Записи -->
-        <section id="form" class="contact">
-            <div class="container">
-                <div class="contact__wrapper">
-                    <div class="section-header">
-                        <span class="section-header__tag">СТАРТ</span>
-                        <h2 class="section-header__title">Записаться на урок</h2>
-                        <p class="section-header__subtitle">Оставьте заявку на бесплатное тестирование уровня</p>
-                    </div>
-                    <form class="form">
-                        <div class="form__group">
-                            <label class="form__label" for="name">Ваше имя</label>
-                            <input class="form__input" type="text" id="name" placeholder="Бота">
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label" for="email">Электронная почта</label>
-                            <input class="form__input" type="email" id="email" placeholder="example@gmail.com">
-                        </div>
-                        <div class="form__group">
-                            <label class="form__label" for="message">Ваш уровень или пожелания</label>
-
-                            <textarea class="form__input" id="message" rows="3" placeholder="Хочу подтянуть разговорный английский..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full">Отправить заявку ↗</button>
-                    </form>
+        <section id="form" class="content-section form-section">
+            <div class="form-wrapper">
+                <div class="section-header" style="margin-bottom: 20px;">
+                    <span class="card-num">СТАРТ</span>
+                    <h2>Записаться на урок</h2>
+                    <p>Оставьте заявку на бесплатное тестирование уровня</p>
                 </div>
+                <form class="clean-form">
+                    <div class="input-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" placeholder="Бота">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Электронная почта</label>
+                        <input type="email" id="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Пожелания или ваш уровень</label>
+                        <textarea id="message" rows="3" placeholder="Хочу подтянуть разговорный английский..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Отправить заявку ↗</button>
+                </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Bostandyk English School. All rights reserved.</p>
-        </div>
+    <footer>
+        <p>© 2026 Bostandyk English School. All rights reserved.</p>
     </footer>
 
+    <!-- Скрипт принудительной прокрутки на самый верх страницы при загрузке -->
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
