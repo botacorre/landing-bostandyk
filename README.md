@@ -1,51 +1,48 @@
-# Bostandyk School — Изящная школа английского языка (Лабораторная работа №3)
+# Bostandyk School — Elegant English Language School (Laboratory Work №3)
 
-- **Ссылка на GitHub Pages:** https://botacorre.github.io/landing-bostandyk/
-- **Трек:** C (Sass + BEM)
-
----
-
-## Использование ИИ (AI Tools)
-
-В ходе работы над проектом использовался **Gemini / ChatGPT / Claude**:
-- **Вёрстка и стилизация:** помощник использовался для генерации адаптивной CSS/Sass-разметки, решения проблем с сеткой (Flexbox и CSS Grid) и быстрой отладки адаптивного меню.
-- **Оптимизация media-запросов:** помощник подсказал корректную реализацию Sass-миксина `respond-to` для удобной работы с брекпоинтами (375px, 768px, 1280px).
-- **Контент и эстетика:** помощь в составлении структуры текстового содержимого и формулировке раздела с обоснованием выбора стека.
+- **GitHub Pages Link:** https://botacorre.github.io/landing-bostandyk/
+- **Track:** C (Sass + BEM)
 
 ---
 
-## Адаптивность
+## AI Tools Usage
+During the project, Gemini / ChatGPT / Claude were used for:
+Layout & Styling: generating Sass, fixing Flexbox/Grid, and debugging the mobile menu.
 
-Сайт полностью адаптирован под различные типы устройств:
+---
 
-### Телефон (до 600 px / Тестовый скриншот: 375 px)
-Меню складывается в аккуратную двухрядную сетку. Карточки курсов и преподавателей выстраиваются строго в 1 колонку.
+## Responsiveness
+
+The website is fully optimized for various device types:
+
+### Phone (up to 600 px / Test Screenshot: 375 px)
+The menu collapses into a clean two-row grid. Course and instructor cards align strictly in a single column.
 ![375px](./screenshots/375.png)
 ![375px](./screenshots/2-375.png)
 
-### Планшет (600–1024 px / Тестовый скриншот: 768 px)
-Сетка перестраивается в 2 колонки.
+### Tablet (600–1024 px / Test Screenshot: 768 px)
+The grid switches to 2 columns.
 ![768px](./screenshots/768.png)
 ![768px](./screenshots/2-768.png)
 
-### Десктоп (от 1024 px / Тестовый скриншот: 1280 px)
-Полноразмерное меню в одну линию, карточки расположены в 3 колонки.
+### Desktop (from 1024 px / Test Screenshot: 1280 px)
+Full-width single-line navigation menu, cards arranged in 3 columns.
 ![1280px](./screenshots/1280.png)
 ![1280px](./screenshots/2-1280.png)
 
 ---
 
-## Почему этот инструмент (Sass + BEM)
+## Why This Tool (Sass + BEM)
 
-Применение препроцессора Sass в сочетании с методологией BEM дало возможность выстроить гибкую и масштабируемую структуру стилей. Вынос ключевых оттенков и типографики в файл `_variables.scss` позволил мгновенно настроить поэтичную и утонченную эстетику сайта. Использование кастомного миксина `respond-to` избавило от рутинного дублирования media-запросов и обеспечило точный контроллинг точек перелома (375px, 768px, 1280px). Методология BEM предотвратила любые конфликты имен классов и сохранила HTML-разметку чистой. В отличие от фреймворков Tailwind или Bootstrap, Sass даёт полный контроль над итоговым размером CSS-файла без лишнего мусора, хотя и требует этапа компиляции.
+Combining the Sass preprocessor with the BEM methodology enabled a flexible and scalable styling structure. Extracting key color shades and typography into the `_variables.scss` file allowed for instant customization of the site's refined and elegant aesthetic. Using the custom `respond-to` mixin eliminated repetitive media queries and ensured precise control over breakpoints (375px, 768px, 1280px). The BEM methodology prevented any class name conflicts and kept the HTML markup clean. Unlike frameworks such as Tailwind or Bootstrap, Sass provides complete control over the final CSS file size without unnecessary bloat, though it requires a compilation step.
 
 ---
 
-## Самопроверка требований
+## Self-Check Requirements
 
-- [x] Отсутствует горизонтальная прокрутка на любых разрешениях экрана.
-- [x] Изображения и блоки не вылезают за границы viewport.
-- [x] Наличие всех 3 скриншотов ширины (375px, 768px, 1280px) в папке `screenshots/`.
-- [x] Все кнопки и ссылки являются рабочими и интерактивными.
-- [x] Указаны инструменты ИИ, использованные при разработке.
-- [x] Использовано минимум 3 коммита с осмысленными сообщениями.
+- [x] No horizontal scrolling across any screen resolutions.
+- [x] Images and blocks do not overflow the viewport boundaries.
+- [x] All 3 width screenshots (375px, 768px, 1280px) are included in the `screenshots/` folder.
+- [x] All buttons and links are functional and interactive.
+- [x] AI tools utilized during development are specified.
+- [x] At least 3 commits with meaningful messages were made.
