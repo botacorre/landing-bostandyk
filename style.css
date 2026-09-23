@@ -549,7 +549,6 @@ footer {
         align-items: center;
     }
 }
-
 @media (max-width: 768px) {
   .header__menu {
     display: grid !important;
