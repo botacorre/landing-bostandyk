@@ -13,20 +13,18 @@ Layout & Styling: generating Sass, fixing Flexbox/Grid, and debugging the mobile
 
 ## Responsiveness
 
-The website is fully optimized for various device types:
 
-### Phone (up to 600 px / Test Screenshot: 375 px)
-The menu collapses into a clean two-row grid. Course and instructor cards align strictly in a single column.
+
+### Phone (Screenshot: 375 px)
+
 ![375px](./screenshots/375.png)
 ![375px](./screenshots/2-375.png)
 
-### Tablet (600–1024 px / Test Screenshot: 768 px)
-The grid switches to 2 columns.
+### Tablet (Screenshot: 768 px)
 ![768px](./screenshots/768.png)
 ![768px](./screenshots/2-768.png)
 
-### Desktop (from 1024 px / Test Screenshot: 1280 px)
-Full-width single-line navigation menu, cards arranged in 3 columns.
+### Desktop (Screenshot: 1280 px)
 ![1280px](./screenshots/1280.png)
 ![1280px](./screenshots/2-1280.png)
 
