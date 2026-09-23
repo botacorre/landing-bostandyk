@@ -1,22 +1,21 @@
 @import 'variables';
 @import 'mixins';
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-main;
   background-color: $color-bg;
   color: $color-text;
-  line-height: 1.7;
+  line-height: 1.6;
   overflow-x: hidden;
   width: 100%;
 }
@@ -28,52 +27,86 @@ img {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
   width: 100%;
 }
 
-.section-title {
-  font-family: $font-heading;
-  font-size: 2.5rem;
-  text-align: center;
-  color: $color-primary;
-  margin-bottom: 5px;
-  font-weight: 600;
-
-  @include respond-to('mobile') {
-    font-size: 2rem;
-  }
-}
-
-.section-subtitle {
-  text-align: center;
-  color: $color-text-muted;
+.section-header {
   margin-bottom: 40px;
-  font-size: 0.95rem;
-  font-style: italic;
+  text-align: center;
+
+  &__tag {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $color-primary;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    letter-spacing: -1px;
+    color: $color-text;
+    margin-bottom: 8px;
+
+    @include respond-to('mobile') {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__subtitle {
+    color: $color-text-muted;
+    font-size: 0.95rem;
+  }
 }
 
 .btn {
   display: inline-block;
-  padding: 14px 28px;
-  border-radius: 30px;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
   font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 14px 26px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
 
   &--primary {
     background-color: $color-primary;
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(139, 90, 43, 0.2);
+    box-shadow: 0 4px 14px rgba(133, 61, 94, 0.25);
 
     &:hover {
       background-color: $color-primary-hover;
       transform: translateY(-2px);
+    }
+  }
+
+  &--outline {
+    background-color: #ffffff;
+    color: $color-primary;
+    border: 1.5px solid $color-primary;
+
+    &:hover {
+      background-color: $color-accent;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--nav {
+    border: 1.5px solid $color-primary;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    color: $color-primary;
+
+    &:hover {
+      background-color: $color-accent;
     }
   }
 
@@ -84,29 +117,29 @@ img {
 
 // Header Navigation
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
+  width: 100%;
+  background: rgba(255, 245, 248, 0.95);
+  backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+  border-bottom: 1px solid $color-border;
 
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    padding: 18px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
     position: relative;
   }
 
   &__logo {
-    font-family: $font-heading;
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 1.2rem;
     color: $color-primary;
     text-decoration: none;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
   }
 
   &__toggle {
@@ -116,15 +149,15 @@ img {
   &__burger {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
-    width: 26px;
-    height: 18px;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
     cursor: pointer;
     z-index: 1001;
 
     span {
       display: block;
-      height: 2px;
+      height: 3px;
       width: 100%;
       background-color: $color-primary;
       border-radius: 2px;
@@ -140,12 +173,13 @@ img {
     @include respond-to('mobile') {
       display: none;
       position: absolute;
-      top: 70px;
+      top: 100%;
       left: 0;
       width: 100%;
-      background-color: #FFFFFF;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       border-bottom: 1px solid $color-border;
+      padding: 20px;
     }
   }
 
@@ -156,19 +190,15 @@ img {
 
     @include respond-to('mobile') {
       flex-direction: column;
-      padding: 25px 0;
-      gap: 18px;
       align-items: center;
+      gap: 15px;
     }
   }
 
   &__link {
     text-decoration: none;
-    color: $color-text;
-    font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 0.3px;
-    transition: color 0.2s ease;
+    color: #555555;
+    font-size: 0.95rem;
 
     &:hover {
       color: $color-primary;
@@ -182,42 +212,121 @@ img {
   }
 }
 
-// Hero / About Section
+// Hero Section
 .hero {
-  padding: 90px 0 70px;
-  text-align: center;
-  background: linear-gradient(180deg, #FFFFFF 0%, $color-bg 100%);
+  padding: 60px 0;
 
-  &__tag {
-    display: inline-block;
-    padding: 6px 16px;
-    background-color: rgba(212, 163, 115, 0.15);
-    color: $color-primary;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-  }
-
-  &__title {
-    font-family: $font-heading;
-    font-size: 3.2rem;
-    line-height: 1.2;
-    color: $color-text;
-    max-width: 800px;
-    margin: 0 auto 20px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 
     @include respond-to('mobile') {
-      font-size: 2.2rem;
+      flex-direction: column;
+      text-align: center;
+    }
+    @include respond-to('tablet') {
+      flex-direction: column;
+      text-align: center;
     }
   }
 
-  &__subtitle {
-    max-width: 620px;
-    margin: 0 auto 35px;
-    color: $color-text-muted;
+  &__content {
+    flex: 1;
+    max-width: 540px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: $color-accent;
+    color: $color-primary;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 3.5rem;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+
+    @include respond-to('mobile') {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__highlight {
+    color: $color-primary;
+  }
+
+  &__desc {
     font-size: 1.05rem;
+    color: $color-text-muted;
+    margin-bottom: 30px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    @include respond-to('mobile') {
+      justify-content: center;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 24px;
+    border-top: 1px solid $color-border;
+
+    @include respond-to('mobile') {
+      justify-content: center;
+    }
+  }
+
+  &__stat-num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: $color-primary;
+    display: block;
+  }
+
+  &__stat-text {
+    font-size: 0.85rem;
+    color: $color-text-muted;
+  }
+
+  &__image-box {
+    flex: 1;
+    position: relative;
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid $color-border;
+    box-shadow: 0 15px 35px rgba(133, 61, 94, 0.1);
   }
 }
 
@@ -227,120 +336,139 @@ img {
 
   &__grid {
     display: grid;
-    gap: 25px;
+    gap: 30px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include respond-to('desktop') {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
 
-.card {
+.course-card {
   background: $color-card-bg;
-  padding: 35px 25px;
+  border: 1px solid $color-border;
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(212, 163, 115, 0.15);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(133, 61, 94, 0.05);
+  transition: transform 0.3s;
 
   &:hover {
     transform: translateY(-5px);
   }
 
-  &__badge {
-    align-self: flex-start;
-    font-size: 0.75rem;
+  &__num {
+    font-size: 0.85rem;
+    font-weight: 700;
     color: $color-primary;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    display: block;
   }
 
   &__title {
-    font-family: $font-heading;
-    font-size: 1.6rem;
-    margin-bottom: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   &__text {
     color: $color-text-muted;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-    flex-grow: 1;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
   }
 
-  &__price {
-    font-weight: 600;
-    color: $color-primary;
-    font-size: 1.1rem;
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 
 // Teachers Section
 .teachers {
   padding: 80px 0;
-  background-color: #FFFFFF;
 
   &__grid {
     display: grid;
-    gap: 25px;
+    gap: 24px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include respond-to('desktop') {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-}
 
-.teacher-card {
-  text-align: center;
-  padding: 30px 20px;
-  border-radius: 16px;
-  background-color: $color-bg;
-
-  &__avatar {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: $color-accent;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-heading;
-    font-size: 1.4rem;
-    margin: 0 auto 15px;
-    font-weight: 600;
+  &__banner {
+    text-align: center;
+    margin-top: 50px;
   }
 
-  &__name {
-    font-family: $font-heading;
-    font-size: 1.4rem;
-    margin-bottom: 4px;
-  }
-
-  &__role {
-    display: block;
-    font-size: 0.8rem;
-    color: $color-primary;
-    margin-bottom: 12px;
+  &__banner-text {
+    font-size: 1.05rem;
+    color: #444444;
+    margin-bottom: 20px;
     font-weight: 500;
   }
 
+  &__banner-img {
+    width: 100%;
+    max-width: 800px;
+    max-height: 380px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid $color-border;
+  }
+}
+
+.teacher-card {
+  background: $color-card-bg;
+  border: 1px solid $color-border;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(133, 61, 94, 0.05);
+
+  &__img {
+    width: 100%;
+    height: 240px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 16px;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  &__badge {
+    display: inline-block;
+    background: $color-accent;
+    color: $color-primary;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  &__exp {
+    display: block;
+    font-size: 0.85rem;
+    color: #888888;
+    margin-bottom: 10px;
+  }
+
   &__desc {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: $color-text-muted;
   }
 }
@@ -351,79 +479,97 @@ img {
 
   &__grid {
     display: grid;
-    gap: 25px;
+    gap: 24px;
     grid-template-columns: 1fr;
 
     @include respond-to('tablet') {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include respond-to('desktop') {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }
 
 .review-card {
   background: $color-card-bg;
-  padding: 30px;
+  border: 1px solid $color-border;
   border-radius: 16px;
-  border-left: 4px solid $color-accent;
+  padding: 28px;
+
+  &__stars {
+    color: #ffb400;
+    margin-bottom: 12px;
+  }
 
   &__text {
-    font-style: italic;
-    color: $color-text;
     font-size: 0.95rem;
+    color: #444444;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    border-top: 1px solid $color-border;
+    padding-top: 14px;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__course {
+    font-size: 0.8rem;
+    color: $color-primary;
   }
 }
 
-// Contact Section
+// Form & Contact Section
 .contact {
   padding: 80px 0;
-  background-color: #FFFFFF;
 
   &__wrapper {
     max-width: 500px;
     margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid $color-border;
+    border-radius: 20px;
+    padding: 40px;
   }
 }
 
 .form {
-  background-color: $color-bg;
-  padding: 35px;
-  border-radius: 16px;
-
   &__group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   &__label {
     display: block;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 6px;
   }
 
   &__input {
     width: 100%;
-    padding: 12px 16px;
-    border: 1px solid $color-border;
+    padding: 12px;
+    border: 1px solid #e0cdd7;
     border-radius: 8px;
-    font-family: inherit;
     font-size: 0.95rem;
     outline: none;
-    transition: border-color 0.2s;
 
     &:focus {
       border-color: $color-primary;
+      background: $color-accent;
     }
   }
 }
 
 .footer {
-  padding: 30px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: $color-text-muted;
   border-top: 1px solid $color-border;
+  text-align: center;
+  padding: 30px;
+  font-size: 0.85rem;
+  color: #888888;
 }
