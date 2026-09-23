@@ -549,3 +549,19 @@ footer {
         align-items: center;
     }
 }
+
+@media (max-width: 768px) {
+  .header__menu {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important; /* Ровно 2 колонки */
+    gap: 8px 12px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+}
+
+
+.teachers__banner {
+  margin-top: 60px !important;
+  margin-bottom: 40px !important;
+}
