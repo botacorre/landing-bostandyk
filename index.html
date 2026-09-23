@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Курсы английского языка Bostandyk School: разговорные группы, преподаватели и бесплатный пробный урок.">
     <title>Bostandyk English School — Курсы английского языка</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <style>
         body {
             background-color: #fff5f8 !important;
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-  
+    <!-- Шапка / Навигация -->
     <header>
         <nav class="nav-container">
             <div class="logo">Bostandyk School</div>
@@ -32,7 +32,7 @@
     </header>
 
     <main>
-        
+        <!-- Главная секция (Hero) -->
         <section id="about" class="hero-section">
             <div class="hero-left">
                 <div class="hero-badge">
@@ -65,7 +65,7 @@
             </div>
             <div class="hero-right">
                 <div class="hero-image-container">
-                    <img src="images/hero-student.jpg" alt="Студент Bostandyk School" class="hero-main-img">
+                    <img src="images/school.jpg" alt="Bostandyk School" class="hero-main-img">
                     <div class="floating-card">
                         <div class="floating-icon">✨</div>
                         <div class="floating-info">
@@ -77,7 +77,7 @@
             </div>
         </section>
 
-        
+        <!-- Секция Курсов -->
         <section id="courses" class="content-section">
             <div class="section-header">
                 <span class="card-num">ПРОГРАММЫ</span>
@@ -89,31 +89,27 @@
                     <span class="card-num">01</span>
                     <h3>General English</h3>
                     <p>Развитие разговорной речи, грамматики и восприятия на слух. Для всех уровней от Starter до Advanced.</p>
-                    <img src="images/course-general.jpg" alt="General English">
+                    <img src="images/generalenglish.jpg" alt="General English">
                 </div>
                 <div class="course-card">
                     <span class="card-num">02</span>
                     <h3>Подготовка к IELTS</h3>
                     <p>Интенсивный курс от сертифицированных преподавателей. Разбор стратегий Speaking, Writing, Reading и Listening.</p>
-                    <img src="images/course-ielts.jpg" alt="IELTS Prep">
+                    <img src="images/ielts.jpg" alt="IELTS Prep">
                 </div>
             </div>
         </section>
 
-        
-        <div class="team-banner">
-            <p class="team-banner-text">Обучение в заботливой атмосфере под руководством опытных менторов</p>
-            <img src="images/team-photo.jpg" alt="Команда Bostandyk School" class="team-banner-img">
-        </div>
-
-        
+        <!-- Секция Преподавателей (все 5 преподавателей + общая фотография команды) -->
         <section id="teachers" class="content-section">
             <div class="section-header">
                 <span class="card-num">КОМАНДА</span>
                 <h2>Преподаватели</h2>
                 <p>Преподаватели с международными сертификатами CELTA и TESOL</p>
             </div>
+            
             <div class="teachers-grid">
+                <!-- 1 -->
                 <div class="teacher-card">
                     <img src="images/teacher1.jpg" alt="Анель Сергазинова">
                     <h3>Анель Сергазинова</h3>
@@ -121,6 +117,7 @@
                     <span class="teacher-exp">Опыт 6 лет</span>
                     <p class="teacher-desc">Экс-преподаватель InterPress. Специалист по IELTS Writing.</p>
                 </div>
+                <!-- 2 -->
                 <div class="teacher-card">
                     <img src="images/teacher2.jpg" alt="Данияр Ахметов">
                     <h3>Данияр Ахметов</h3>
@@ -128,6 +125,7 @@
                     <span class="teacher-exp">Опыт 8 лет</span>
                     <p class="teacher-desc">Выпускник UoM. Спикинг-тренер по постановке речи.</p>
                 </div>
+                <!-- 3 -->
                 <div class="teacher-card">
                     <img src="images/teacher3.jpg" alt="Камила Оспанова">
                     <h3>Камила Оспанова</h3>
@@ -135,10 +133,32 @@
                     <span class="teacher-exp">Опыт 5 лет</span>
                     <p class="teacher-desc">Автор интерактивных методик изучения грамматики.</p>
                 </div>
+                <!-- 4 -->
+                <div class="teacher-card">
+                    <img src="images/teacher4.jpg" alt="Алихан Нурланов">
+                    <h3>Алихан Нурланов</h3>
+                    <span class="teacher-badge">IELTS 8.5 / CELTA</span>
+                    <span class="teacher-exp">Опыт 7 лет</span>
+                    <p class="teacher-desc">Эксперт по подготовке к разделу Listening и Speaking.</p>
+                </div>
+                <!-- 5 -->
+                <div class="teacher-card">
+                    <img src="images/teacher5.jpg" alt="Диана Жумабекова">
+                    <h3>Диана Жумабекова</h3>
+                    <span class="teacher-badge">TESOL / Business English</span>
+                    <span class="teacher-exp">Опыт 4 года</span>
+                    <p class="teacher-desc">Специалист по разговорному и деловому английскому.</p>
+                </div>
+            </div>
+
+            <!-- Баннер команды теперь находится прямо внизу раздела Преподаватели -->
+            <div class="team-banner">
+                <p class="team-banner-text">Обучение в заботливой атмосфере под руководством опытных менторов</p>
+                <img src="images/teacher.jpg" alt="Команда Bostandyk School" class="team-banner-img">
             </div>
         </section>
 
-        
+        <!-- Секция Отзывов -->
         <section id="reviews" class="content-section">
             <div class="section-header">
                 <span class="card-num">ОТЗЫВЫ</span>
@@ -173,7 +193,7 @@
             </div>
         </section>
 
-     
+        <!-- Форма Записи -->
         <section id="form" class="content-section form-section">
             <div class="form-wrapper">
                 <div class="section-header" style="margin-bottom: 20px;">
@@ -204,7 +224,7 @@
         <p>© 2026 Bostandyk English School. All rights reserved.</p>
     </footer>
 
-    
+    <!-- Скрипт принудительной прокрутки на самый верх страницы при загрузке -->
     <script>
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
