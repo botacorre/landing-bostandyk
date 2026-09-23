@@ -603,3 +603,73 @@ footer {
     white-space: nowrap !important;
   }
 }
+/* --- 1. ШАПКА В ТЕЛЕФОННОМ ФОРМАТЕ --- */
+@media (max-width: 768px) {
+  .header .container,
+  .header__inner {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 12px 16px !important;
+  }
+
+  /* Bostandyk School слева */
+  .header__logo {
+    order: 1 !important;
+  }
+
+  /* Кнопка "Пробный урок" справа на одном уровне */
+  .header__btn,
+  .header__action,
+  .header a[href*="lesson"],
+  .header .btn {
+    order: 2 !important;
+    margin-left: auto !important;
+    font-size: 13px !important;
+    padding: 6px 14px !important;
+  }
+
+  /* Навигация в 2 ряда под логотипом и кнопкой */
+  .header__menu,
+  .header__nav ul {
+    order: 3 !important;
+    width: 100% !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px 12px !important;
+    justify-items: center !important;
+    text-align: center !important;
+    margin-top: 12px !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+}
+
+/* --- 2. ИСПРАВЛЕНИЕ ОТСТУПОВ ФОТО И ТЕКСТА О МЕНТОРАХ --- */
+
+/* Отодвигаем заголовок о менторах вниз от карточек преподавателей */
+.teachers__banner,
+.teachers__subtitle,
+.teachers__bottom-title,
+section.teachers .banner-title {
+  margin-top: 40px !important;   /* Опускает текст ниже карточек */
+  margin-bottom: 16px !important; /* Небольшой отступ от текста до картинки */
+  text-align: center !important;
+  clear: both !important;
+}
+
+/* Корректируем нижний отступ у самой секции с фото до отзывов */
+.teachers__image-wrapper,
+.teachers__photo-block,
+section.teachers {
+  margin-bottom: 30px !important; /* Убирает огромный пустой отступ перед «Отзывы» */
+  padding-bottom: 0 !important;
+}
+
+/* Сжимаем огромный отступ перед секцией отзывов */
+section.reviews,
+.reviews {
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+}
