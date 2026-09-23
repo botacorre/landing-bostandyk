@@ -9,18 +9,28 @@
 </head>
 <body>
 
-    <header>
-        <nav class="nav-container">
-            <span class="logo">Bostandyk School</span>
-            <ul class="nav-links">
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#services">Курсы</a></li>
-                <li><a href="#teachers">Преподаватели</a></li>
-                <li><a href="#reviews">Отзывы</a></li>
-            </ul>
-            <a href="#contact" class="btn-nav">Пробный урок ↗</a>
-        </nav>
-    </header>
+<header class="header">
+  <div class="header__container container">
+    <a href="#" class="header__logo">Bostandyk School</a>
+    
+    <input type="checkbox" id="menu-toggle" class="header__toggle">
+    <label for="menu-toggle" class="header__burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li><a href="#about" class="header__link">О нас</a></li>
+        <li><a href="#courses" class="header__link">Курсы</a></li>
+        <li><a href="#teachers" class="header__link">Преподаватели</a></li>
+        <li><a href="#reviews" class="header__link">Отзывы</a></li>
+        <li><a href="#contact" class="header__link">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main>
         <section id="about" class="hero-section">
